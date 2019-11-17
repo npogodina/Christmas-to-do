@@ -3,7 +3,7 @@ $("ul").on("click", "li", function() {
     $(this).toggleClass("completed");
 });
 
-// Click on X to delete Todos
+// Click on Trash Icon to delete Todos
 $("ul").on("click", "span", function(event) {
     $(this).parent().fadeOut(500, function() {
         $(this).remove();
@@ -19,6 +19,11 @@ $("input[type='text']").keypress(function(event) {
         $("ul").append("<li><span><i class='fas fa-trash'></i></span> " + todoText + "</li>");
 
     }
+});
+
+// Toggling the input form on and off
+$("#toggle-form").click(function() {
+    $("input[type='text']").fadeToggle();
 });
 
 
